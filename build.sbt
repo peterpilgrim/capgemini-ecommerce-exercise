@@ -20,8 +20,9 @@ libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.0" % "test"
 )
 
+connectInput in run := true
 
-// mainClass in (Compile,run) := Some("uk.co.xenonique.capgemini.CheckoutApplication")
+mainClass in (Compile,run) := Some("uk.co.xenonique.capgemini.CheckoutApplication")
 
 // fork a new JVM for 'run' and 'test:run'
 fork := true
