@@ -26,6 +26,34 @@ I used Scala 2.12 and the ScalaTest 3 release
 See `LICENSE.txt' for the license for this source code
 
 
+
+INSTRUCTIONS
+
+Execute the following commands in this software distribution:
+
+    > sbt clean
+    
+    > sbt compile
+    
+    > sbt test
+    
+    > sbt package
+    
+
+Finally, you can execute the demonstration application either with the shell script 
+
+    > run.sh
+    
+Or use sbt like so
+ 
+    > sbt run
+    
+    
+
+
+
+
+
 Peter Pilgrim
 July 2017
 Web: http://www.xenonique.co.uk
