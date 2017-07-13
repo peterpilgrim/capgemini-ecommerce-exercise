@@ -1,5 +1,6 @@
 package uk.co.xenonique.capgemini
 
+import scala.collection.immutable.List
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -28,9 +29,11 @@ object CheckoutApplication {
         |
       """.stripMargin)
     val itemList = ListBuffer[CartItem]()
+    val discounters = List(new BuyThreeOrangesForTwoDiscounter(), new BuyTwoApplesGetOneFreeDiscounter)
+    println(s"Your friendly discounts today are: ${discounters}\n")
 
     while (ok) {
-      val shoppingCart = new ShoppingCart(itemList.toList)
+      val shoppingCart = new ShoppingCart(itemList.toList, discounters)
       println(s"Cart :=  $itemList")
       printf("Checkout price £%.2f\n", shoppingCart.price())
       print("> ")
